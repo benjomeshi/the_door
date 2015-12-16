@@ -10,6 +10,8 @@ the door to get into the toilet so you can learn erlang in the toilet to avoid o
 [erlang course w/ exercises](http://www.erlang.org/course/course.html)  
 [getting started with erlang](http://www.erlang.org/doc/getting_started/users_guide.html)  
 [erlang programming oreilly pdf](http://liancheng.info/bib/Cesarini2009.pdf)  
+#### eunit
+http://erlang.org/doc/apps/eunit/chapter.html  
 #### interactive & tasks
 [interactive erlang quest](https://github.com/eriksoe/ErlangQuest)  
 [sphere](http://www.spoj.com/)
