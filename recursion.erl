@@ -9,10 +9,7 @@ zip([X|Xs],[Y|Ys], Accum) -> zip(Xs, Ys, [{X, Y}|Accum]).
 
 quicksort([]) -> [];
 quicksort([Pivot|Rest]) -> 
-	[quicksort(As) || As <- Rest, As < Pivot] ++ 
-	[Pivot] ++ 
-	[quicksort(Bs) || Bs <- Rest, Bs > Pivot]
-quicksort(N) -> [N].
+	quicksort([As || As <- Rest, As < Pivot]) ++ [Pivot] ++ quicksort([Bs || Bs <- Rest, Bs > Pivot]).
 
 %% internals %%
 reverse(A) -> reverse(A, []).
