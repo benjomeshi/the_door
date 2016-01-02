@@ -1,18 +1,20 @@
 -module(recursion).
 -export([zip/2, quicksort/1]).
 
-zip(X, Y) -> reverse(zip(X, Y, [])).
+%%zip two lists of equal length into a list of paired tuples
+zip(X,Y) -> reverse(zip(X,Y,[])).
 
-zip([], _, Accum) -> Accum;
-zip(_, [], Accum) -> Accum;
-zip([X|Xs],[Y|Ys], Accum) -> zip(Xs, Ys, [{X, Y}|Accum]).
+zip([],[], Acc) -> Acc;
+zip([X|Xs], [Y|Ys], Acc) -> zip(Xs, Ys, [{X,Y}|Acc]).
 
+%%quicksort algorithm, use a pivot
 quicksort([]) -> [];
-quicksort([Pivot|Rest]) -> 
-	quicksort([As || As <- Rest, As < Pivot]) ++ [Pivot] ++ quicksort([Bs || Bs <- Rest, Bs > Pivot]).
+quicksort([Pivot|X]) ->
+	quicksort( [Xs || Xs <- X, Xs < Pivot]) ++ [Pivot] ++ quicksort( [Xl || Xl <- X, Xl >= Pivot]).
 
-%% internals %%
-reverse(A) -> reverse(A, []).
+%% internals %
+%%reverse reverses a list
+reverse(X) -> reverse(X,[]).
 
-reverse([], Accum) -> Accum;
-reverse([A|As], Accum) -> reverse(As, [A|Accum]). 
+reverse([], Acc) -> Acc;
+reverse([X|Xs], Acc) -> reverse(Xs, [X|Acc]).
