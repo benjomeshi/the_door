@@ -22,3 +22,7 @@ thinking in erlang [eng](http://www.scribd.com/doc/44221/Thinking-in-Erlang) - [
 #### other tools
 [vim editor](http://www.vim.org/download.php)  
 [organization](www.github.com/benjomeshi)  
+
+#### NAND to Tetris
+[Nand to Tetris Coursera](https://www.coursera.org/course/nand2tetris1)
+[Nand to Tetris pdf](http://www.nand2tetris.org/course.php)
